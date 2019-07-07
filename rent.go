@@ -39,6 +39,7 @@ type Options struct {
 	Section     string `url:"section,omitempty"`     // 鄉鎮 - 可選擇多個區域，例如：`section=7,4`
 	Kind        int    `url:"kind"`                  // 租屋類型 - `0`：不限、`1`：整層住家、`2`：獨立套房、`3`：分租套房、`4`：雅房、`8`：車位，`24`：其他
 	RentPrice   string `url:"rentprice,omitempty"`   // 租金 - `2`：5k - 10k、`3`：10k - 20k、`4`: 20k - 30k；或者可以輸入價格範圍，例如：`0,10000`
+	MRTCoods	string `url:"mrtcoods,omitempty"` 
 	Area        string `url:"area,omitempty"`        // 坪數格式 - `10,20`（10 到 20 坪）
 	Order       string `url:"order"`                 // 貼文時間 - 預設使用刊登時間：`posttime`，或是使用價格排序：`money`
 	OrderType   string `url:"orderType"`             // 排序方式 - `desc` 或 `asc`
@@ -53,6 +54,7 @@ type Options struct {
 	Option      string `url:"option,omitempty"`      // 提供設備 - `tv`：電視、`cold`：冷氣、`icebox`：冰箱、`hotwater`：熱水器、`naturalgas`：天然瓦斯、`four`：第四台、`broadband`：網路、`washer`：洗衣機、`bed`：床、`wardrobe`：衣櫃、`sofa`：沙發。可選擇多個設備，例如：option=tv,cold
 	Other       string `url:"other,omitempty"`       // 其他條件 - `cartplace`：有車位、`lift`：有電梯、`balcony_1`：有陽台、`cook`：可開伙、`pet`：可養寵物、`tragoods`：近捷運、`lease`：可短期租賃。可選擇多個條件，例如：other=cartplace,cook
 	FirstRow    int    `url:"firstRow"`
+	
 }
 
 // HouseInfoCollection is the representation house information collection.
@@ -90,6 +92,7 @@ func NewOptions() *Options {
 		Order:     "posttime",
 		OrderType: "desc",
 		FirstRow:  0,
+		MRTCoods: "4213,4212,4211,4215,4214",
 	}
 }
 

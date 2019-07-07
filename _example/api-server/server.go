@@ -25,9 +25,11 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		options.NotCover = r.FormValue("notCover")
 		options.RentPrice = r.FormValue("rentPrice")
 		options.OrderType = r.FormValue("orderType")
+		options.MRTCoods = r.FormValue("mrtcoods")
 		options.Sex, _ = strconv.Atoi(r.FormValue("sex"))
 		options.Kind, _ = strconv.Atoi(r.FormValue("kind"))
 		options.FirstRow, _ = strconv.Atoi(r.FormValue("firstRow"))
+		
 
 		url, err := rent.GenerateURL(options)
 		if err != nil {
