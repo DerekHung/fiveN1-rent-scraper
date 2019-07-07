@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	rent "github.com/neighborhood999/fiveN1-rent-scraper"
+	rent "github.com/DerekHung/fiveN1-rent-scraper"
 )
 
 func main() {
@@ -13,7 +13,7 @@ func main() {
 	o.MRTCoods = `4213,4212,4211,4215,4214`
 	o.RentPrice = `15000, 27000`
 	o.Area = `20,70`
-	o.Shape = 2
+	o.Shape = `2`
 	o.Other = `cook`
 	o.Order = `posttime`
 	o.OrderType = `desc`
