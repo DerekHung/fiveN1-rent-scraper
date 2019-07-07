@@ -14,6 +14,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method == "GET" {
 		options.Area = r.FormValue("area")
+		option.Region = r.FormValue("regionid")
 		options.Role = r.FormValue("role")
 		options.Other = r.FormValue("other")
 		options.Order = r.FormValue("order")
