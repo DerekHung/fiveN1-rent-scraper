@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	rent "github.com/neighborhood999/fiveN1-rent-scraper"
+	rent "github.com/DerekHung/fiveN1-rent-scraper"
 )
 
 func callbackHandler(w http.ResponseWriter, r *http.Request) {
